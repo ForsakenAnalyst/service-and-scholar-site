@@ -1,19 +1,25 @@
 :root {
-  --bg: #020617;
-  --bg-alt: #020617;
-  --bg-soft: #020617;
-  --card-bg: #020617;
-  --primary: #22c55e;
-  --primary-soft: rgba(34, 197, 94, 0.1);
+  /* Brand colors */
+  --bg: #020617;              /* main background */
+  --bg-elevated: #020617;     /* cards / header backing */
+  --bg-soft: #020617;         /* subtle section backgrounds */
+
+  --primary: #22c55e;         /* main “action” green */
+  --primary-soft: rgba(34, 197, 94, 0.12);
+
+  --accent: #38bdf8;          /* secondary blue accent */
+  --accent-soft: rgba(56, 189, 248, 0.14);
+
   --text-main: #f9fafb;
   --text-subtle: #9ca3af;
+
   --border-subtle: #1f2937;
-  --accent: #38bdf8;
-  --danger: #f97373;
+
   --radius-lg: 1.25rem;
   --radius-xl: 999px;
+
   --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
-  --container-width: 1120px;
+  --container-width: 1040px;
 }
 
 *,
@@ -22,7 +28,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -44,10 +51,13 @@ body {
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: 4.25rem 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
 }
 
 .section-alt {
+  padding: 4.25rem 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
   background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.04), transparent 55%);
 }
 
@@ -60,6 +70,14 @@ body {
   max-width: 640px;
   color: var(--text-subtle);
   margin-bottom: 2.5rem;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
 }
 
 /* Header & nav */
@@ -142,13 +160,35 @@ body {
   align-items: center;
 }
 
+.hero-text {
+  max-width: 34rem;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.7rem;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-tags span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5e7eb;
 }
 
 .hero h1 {
@@ -273,8 +313,15 @@ body {
 
 .card h3 {
   margin-top: 0;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.4rem;
   font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.card p {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 0.92rem;
+  color: var(--text-subtle);
 }
 
 .card ul {
@@ -337,7 +384,7 @@ body {
 /* Contact form */
 
 .contact-form {
-  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 1));
+  background: radial-gradient(circle at top, var(--accent-soft), rgba(15, 23, 42, 1));
   border-radius: var(--radius-lg);
   padding: 1.5rem 1.4rem;
   border: 1px solid rgba(56, 189, 248, 0.35);
@@ -393,8 +440,9 @@ body {
 
 .site-footer {
   border-top: 1px solid rgba(31, 41, 55, 1);
-  padding: 1.75rem 0 2.25rem;
+  padding: 1.6rem 0 2.1rem;
   background: radial-gradient(circle at bottom, #020617 0, #020617 60%);
+  margin-top: 1rem;
 }
 
 .footer-inner {
@@ -433,6 +481,10 @@ body {
 
 @media (max-width: 600px) {
   .section {
+    padding: 3.25rem 0;
+  }
+
+  .section-alt {
     padding: 3.25rem 0;
   }
 
