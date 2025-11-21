@@ -124,20 +124,25 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Desktop nav (tabs) */
+
 .nav {
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
 
-.nav a {
+.nav-desktop a {
   text-decoration: none;
   color: var(--text-subtle);
   font-size: 0.9rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
 }
 
-.nav a:hover {
+.nav-desktop a:hover {
   color: var(--text-main);
+  border-bottom-color: rgba(34, 197, 94, 0.8);
 }
 
 .nav-cta {
@@ -145,6 +150,75 @@ body {
   border-radius: var(--radius-xl);
   border: 1px solid rgba(148, 163, 184, 0.5);
   color: #e5e7eb;
+}
+
+/* Mobile nav toggle (hamburger) */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 38px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 18px;
+  margin: 0 auto;
+  background: #e5e7eb;
+  border-radius: 999px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* cross animation */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* Mobile dropdown nav */
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem 0.9rem;
+  background: rgba(2, 6, 23, 0.98);
+  border-bottom: 1px solid rgba(15, 23, 42, 1);
+}
+
+.nav-mobile.open {
+  display: flex;
+}
+
+.nav-mobile a {
+  text-decoration: none;
+  color: var(--text-subtle);
+  font-size: 0.9rem;
+  padding: 0.25rem 0;
+}
+
+.nav-mobile a:hover {
+  color: var(--text-main);
+}
+
+.nav-mobile-cta {
+  margin-top: 0.2rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(31, 41, 55, 1);
 }
 
 /* Hero */
@@ -474,8 +548,12 @@ body {
     padding-inline: 1rem;
   }
 
-  .nav {
-    display: none; /* Simple mobile: we can add a menu later */
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 }
 

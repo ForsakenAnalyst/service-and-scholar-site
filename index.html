@@ -18,15 +18,34 @@
         <span class="logo-mark">S&S</span>
         <span class="logo-text">Service & Scholar</span>
       </div>
-      <nav class="nav">
+
+      <!-- Desktop nav (tabs) -->
+      <nav class="nav nav-desktop">
+        <a href="#stories">Real Stories</a>
+        <a href="#articles">Degree Planning</a>
+        <a href="#pillars">Study &amp; Life Systems</a>
+        <a href="#products">Tools &amp; Resources</a>
         <a href="#about">About</a>
-        <a href="#pillars">Pillars</a>
-        <a href="#articles">Articles</a>
-        <a href="#products">Resources</a>
-        <a href="#stories">Stories</a>
         <a href="#contact" class="nav-cta">Get Started</a>
       </nav>
+
+      <!-- Mobile hamburger button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+
+    <!-- Mobile dropdown menu -->
+    <nav class="nav-mobile" id="nav-mobile">
+      <a href="#stories">Real Stories</a>
+      <a href="#articles">Degree Planning</a>
+      <a href="#pillars">Study &amp; Life Systems</a>
+      <a href="#products">Tools &amp; Resources</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-mobile-cta">Get Started</a>
+    </nav>
   </header>
 
   <!-- Hero section -->
@@ -318,6 +337,27 @@
   <script>
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMobile = document.getElementById('nav-mobile');
+
+    if (navToggle && navMobile) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMobile.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close menu when a mobile link is clicked
+      navMobile.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMobile.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
   </script>
 </body>
 </html>
