@@ -115,33 +115,15 @@ body {
   padding: 0.85rem 1.25rem;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-}
+/* Wordmark (no logo puck) */
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: radial-gradient(circle at top left, #10b981, #064e3b);
-  color: #020617;
+.logo-wordmark {
   font-weight: 700;
-  font-size: 0.85rem;
-  box-shadow: 0 0 0 2px rgba(6, 22, 36, 1);
-}
-
-.logo-text {
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.16em;
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #e5e7eb;
+  text-decoration: none;
 }
 
 /* Desktop nav */
@@ -252,11 +234,13 @@ body {
 .landing-inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
+  text-align: center;
 }
 
 .landing-title-block {
-  max-width: 40rem;
+  max-width: 44rem;
 }
 
 .landing-kicker {
@@ -268,39 +252,22 @@ body {
 }
 
 .landing-title {
-  font-size: clamp(3rem, 5vw, 3.8rem);
+  font-size: clamp(3.2rem, 5.6vw, 4.1rem);
   margin: 0 0 0.6rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
 }
 
 .landing-subtitle {
   color: var(--text-subtle);
-  max-width: 30rem;
-  margin: 0 0 1.5rem;
-}
-
-.landing-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.landing-tags span {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-radius: 999px;
-  padding: 0.18rem 0.8rem;
-  border: 1px solid rgba(148, 163, 184, 0.55);
-  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.2), rgba(15, 23, 42, 0.96));
-  color: #e5e7eb;
+  max-width: 34rem;
+  margin: 0 auto 0;
 }
 
 .landing-scroll-hint {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.4rem;
   font-size: 0.8rem;
   color: var(--text-subtle);
@@ -495,6 +462,8 @@ body {
   font-size: 0.95rem;
 }
 
+/* Contact / subscribe form */
+
 .contact-form {
   background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), rgba(6, 22, 36, 1));
   border-radius: var(--radius-lg);
@@ -599,7 +568,7 @@ body {
   }
 
   .landing-title {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
   .card {
