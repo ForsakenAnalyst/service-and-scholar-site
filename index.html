@@ -10,26 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <!-- Sticky header (fades in on scroll) -->
+<body data-page="home">
+  <!-- Sticky header: appears after scroll on home -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-mark">S&S</span>
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S&amp;S</span>
         <span class="logo-text">Service &amp; Scholar</span>
-      </div>
+      </a>
 
-      <!-- Desktop nav (tabs) -->
+      <!-- Desktop nav -->
       <nav class="nav nav-desktop">
-        <a href="#about">About</a>
-        <a href="#articles">Articles</a>
-        <a href="#resources">Resources</a>
-        <a href="#stories">Stories</a>
-        <a href="#premium">Premium</a>
-        <a href="#subscribe" class="nav-cta">Subscribe</a>
+        <a href="about.html">About</a>
+        <a href="articles.html">Articles</a>
+        <a href="resources.html">Resources</a>
       </nav>
 
-      <!-- Mobile hamburger button -->
+      <!-- Mobile hamburger -->
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -37,355 +34,80 @@
       </button>
     </div>
 
-    <!-- Mobile dropdown menu -->
+    <!-- Mobile dropdown nav -->
     <nav class="nav-mobile" id="nav-mobile">
-      <a href="#about">About</a>
-      <a href="#articles">Articles</a>
-      <a href="#resources">Resources</a>
-      <a href="#stories">Stories</a>
-      <a href="#premium">Premium</a>
-      <a href="#subscribe" class="nav-mobile-cta">Subscribe</a>
+      <a href="about.html">About</a>
+      <a href="articles.html">Articles</a>
+      <a href="resources.html">Resources</a>
     </nav>
   </header>
 
-  <!-- Landing hero: title fades out on scroll -->
-  <section class="landing-hero" id="top">
+  <!-- Landing hero: big title that fades out on scroll -->
+  <section class="landing-hero">
     <div class="container landing-inner">
       <div class="landing-title-block">
         <p class="landing-kicker">For active duty service members</p>
         <h1 class="landing-title">Service &amp; Scholar</h1>
         <p class="landing-subtitle">
-          Helping you turn military education benefits into a real degree&nbsp;&mdash; without burning out, getting lost in admin, or waiting “until later.”
+          Helping you turn military education benefits into a real degree&nbsp;&mdash;
+          without burning out, getting lost in admin, or waiting “until later.”
         </p>
         <div class="landing-tags">
-          <span>Night Ops, Study Ops</span>
-          <span>Degree Planning</span>
+          <span>Night ops, study ops</span>
+          <span>Degree planning</span>
           <span>CLEP &amp; DSST</span>
         </div>
       </div>
+
       <div class="landing-scroll-hint">
-        <span>Scroll to begin</span>
+        <span>Scroll to continue</span>
         <div class="scroll-dot"></div>
       </div>
     </div>
   </section>
 
-  <!-- About section -->
-  <section id="about" class="section section-alt">
+  <!-- Mission + mini about blurb -->
+  <section class="section section-alt">
     <div class="container two-col">
       <div>
-        <h2>About Service &amp; Scholar</h2>
+        <h2>Why Service &amp; Scholar exists</h2>
         <p class="lead">
-          Every service member deserves a clear path to their education goals.
+          Every service member deserves a clear, realistic path to a degree that actually matters after the military.
         </p>
         <p>
-          Service &amp; Scholar exists to guide, motivate, and simplify the process of earning a college degree while on active duty. Whether you’re just starting to look at schools or already juggling classes with 12-hour shifts, this space is built to make the path clearer and lighter.
-        </p>
-        <p>
-          The focus is simple: turn your military education benefits into a degree that actually serves your future&nbsp;&mdash; without wasting time, money, or energy on guesswork.
+          Service &amp; Scholar is here to cut through the confusion around schools, benefits, and schedules. The goal is simple:
+          help you use your education benefits well, finish your degree, and still keep your sanity and performance in the job.
         </p>
       </div>
       <div>
-        <h3>The person behind the project</h3>
+        <h3>Built from real experience</h3>
         <p>
-          Service &amp; Scholar is run by an active duty service member with over a decade in uniform and just as much time spent working through college using military education benefits.
-        </p>
-        <p>
-          I’ve navigated Tuition Assistance, the GI Bill, CLEP/DSST exams, and the maze of school choices from the inside. I’ve made mistakes, figured out what actually works in a busy ops environment, and built systems to stay on track between shifts, deployments, and all the “hey, got a minute?” taskers.
+          This project is run by an active duty service member with over 10 years in uniform and just as many spent working
+          through college using military education benefits.
         </p>
         <p>
-          This site is the resource I wish I had at year one in the military: clear steps, honest expectations, and practical tools designed for real life in uniform.
+          I’ve used TA, the GI Bill, credit-by-exam, and plenty of late-night study sessions between shifts. This site is
+          built from that experience&nbsp;&mdash; the hard lessons, shortcuts, and systems that actually hold up in a real ops environment.
         </p>
+        <a href="about.html" class="btn ghost">Read the full story</a>
       </div>
     </div>
   </section>
 
-  <!-- Content pillars / how we help -->
-  <section id="pillars" class="section">
-    <div class="container">
-      <h2 class="section-title">How Service &amp; Scholar helps you</h2>
-      <p class="section-intro">
-        Content is organized into clear pillars, so you always know what kind of support you’re getting and where to go next when you’re stuck.
-      </p>
-      <div class="grid pillars-grid">
-        <article class="card">
-          <h3>College Planning &amp; Strategy</h3>
-          <p>
-            From “no idea where to start” to a step-by-step plan that fits your MOS, tempo, and long-term goals.
-          </p>
-          <ul>
-            <li>Picking the right degree and school</li>
-            <li>Using TA, GI Bill, and exams together</li>
-            <li>Mapping out a real timeline you can stick to</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Study &amp; Life Systems</h3>
-          <p>
-            Routines, tools, and templates that survive rotating shifts, duty days, and surprise taskers.
-          </p>
-          <ul>
-            <li>Study plans for low-energy days</li>
-            <li>Shift-friendly weekly planning</li>
-            <li>Systems for staying organized</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Motivation &amp; Mindset</h3>
-          <p>
-            Encouragement that respects the grind: no fluff, just grounded support and honest stories.
-          </p>
-          <ul>
-            <li>Real experiences from other service members</li>
-            <li>Dealing with doubt, delay, and burnout</li>
-            <li>Keeping sight of your “why” over the long haul</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Career &amp; Transition Readiness</h3>
-          <p>
-            Make sure your degree matters after the military, not just on paper while you’re still in.
-          </p>
-          <ul>
-            <li>Degrees that translate to civilian roles</li>
-            <li>Planning LinkedIn, resumes, and certs early</li>
-            <li>Using your experience and credits wisely</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Articles section: card / thumbnail layout -->
-  <section id="articles" class="section section-alt">
-    <div class="container">
-      <p class="section-kicker">Articles</p>
-      <h2 class="section-title">Guides for earning your degree while you serve</h2>
-      <p class="section-intro">
-        Long-form articles that walk through key parts of the process: planning, funding, studying, and finishing your degree on active duty.
-      </p>
-
-      <div class="grid thumb-grid">
-        <!-- Example article card -->
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Image coming soon</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Degree Planning &amp; Strategy</p>
-            <h3>How to Start College While Active Duty: A Step-by-Step Playbook</h3>
-            <p class="thumb-summary">
-              A clear walkthrough from “maybe I should go back to school” to enrolling in your first class without missing key admin steps.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Image coming soon</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Benefits &amp; Funding</p>
-            <h3>TA, GI Bill &amp; Beyond: Making Your Education Benefits Work Together</h3>
-            <p class="thumb-summary">
-              Understand the big pieces, what to use while you’re in, and how to protect options for life after service.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Image coming soon</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Study &amp; Life Systems</p>
-            <h3>Time Management for Rotating Shifts and 12-Hour Days</h3>
-            <p class="thumb-summary">
-              Practical weekly rhythms and micro-habits so school keeps moving even when your schedule keeps changing.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Image coming soon</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Credit-by-Exam</p>
-            <h3>Using CLEP &amp; DSST to Test Out of Classes the Smart Way</h3>
-            <p class="thumb-summary">
-              How to pick the right exams, prep efficiently, and shave months off your degree without burning out.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resources section -->
-  <section id="resources" class="section">
-    <div class="container">
-      <p class="section-kicker">Tools &amp; Resources</p>
-      <h2 class="section-title">Checklists, planners, and templates</h2>
-      <p class="section-intro">
-        Downloadable resources designed for active duty schedules and real-world constraints. Most will start free, with deeper toolkits available later.
-      </p>
-
-      <div class="grid thumb-grid">
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>PDF Checklist</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Degree Planning</p>
-            <h3>Degree Gameplan Checklist</h3>
-            <p class="thumb-summary">
-              A single-page walkthrough from “idea” to your first class, so you always know what step comes next.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Question Guide</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Benefits &amp; Admin</p>
-            <h3>Education Office Question Sheet</h3>
-            <p class="thumb-summary">
-              A structured list of questions to bring to your education office, so you don’t forget anything important in the moment.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Planner</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Study &amp; Life Systems</p>
-            <h3>Weekly Study Session Planner</h3>
-            <p class="thumb-summary">
-              Built for duty days and weird shifts, with space to plan around your real-world energy and time.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stories section -->
-  <section id="stories" class="section section-alt">
-    <div class="container">
-      <p class="section-kicker">Stories</p>
-      <h2 class="section-title">Real service members, real degrees</h2>
-      <p class="section-intro">
-        Highlighting real journeys from active duty to degree completion: what worked, what didn’t, and what they’d tell someone starting today.
-      </p>
-
-      <div class="grid thumb-grid">
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Story</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Enlisted Journeys</p>
-            <h3>From Night Shift to Bachelor’s Degree</h3>
-            <p class="thumb-summary">
-              How one enlisted member pieced together TA, CLEP, and online classes to finish before hitting 10 years in service.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Story</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">Non-Traditional Paths</p>
-            <h3>Changing Degree Plans Without Starting Over</h3>
-            <p class="thumb-summary">
-              A real example of pivoting degrees mid-career while protecting credits and benefits.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-thumb">
-          <div class="thumb-image thumb-placeholder">
-            <span>Story</span>
-          </div>
-          <div class="thumb-content">
-            <p class="thumb-category">In Progress</p>
-            <h3>Balancing Deployments and School</h3>
-            <p class="thumb-summary">
-              A look at what it really feels like to keep going on classes with deployments in the mix.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Premium section (future products) -->
-  <section id="premium" class="section">
-    <div class="container two-col">
-      <div>
-        <p class="section-kicker">Premium (Coming Later)</p>
-        <h2 class="section-title">Deep-dive products for when you’re ready</h2>
-        <p class="section-intro">
-          Most content and tools will be free. Premium products will be for those who want structured, start-to-finish systems with everything in one place.
-        </p>
-        <p>
-          Think: done-for-you degree planning frameworks, CLEP/DSST strategy blueprints, and full study &amp; life systems tuned specifically for active duty tempo.
-        </p>
-      </div>
-      <div class="grid premium-grid">
-        <article class="card premium-card">
-          <h3>Degree Planning Intensive</h3>
-          <p>
-            A guided framework to go from “I should probably use my benefits” to a clear, written, realistic degree plan.
-          </p>
-          <p class="tag">Planned</p>
-        </article>
-
-        <article class="card premium-card">
-          <h3>CLEP &amp; DSST Playbook</h3>
-          <p>
-            Strategy, study flows, and planning templates to help you maximize credit-by-exam without overloading yourself.
-          </p>
-          <p class="tag">Planned</p>
-        </article>
-
-        <article class="card premium-card">
-          <h3>Study &amp; Life Systems Toolkit</h3>
-          <p>
-            Templates, checklists, and examples for building routines that hold up under weird shifts and long days.
-          </p>
-          <p class="tag">Planned</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Subscribe / email capture (bottom of page) -->
-  <section id="subscribe" class="section section-alt">
+  <!-- Bottom subscribe box -->
+  <section id="subscribe" class="section">
     <div class="container two-col subscribe-layout">
       <div>
         <h2>Stay in the loop</h2>
         <p>
-          If you want updates as core articles, tools, and stories go live, drop your email below. You’ll hear from me when there’s something useful&nbsp;&mdash; not just noise.
+          Get updates as new articles, resources, and stories go live. No spam, no fluff&nbsp;&mdash; just practical support for
+          earning your degree while you serve.
         </p>
         <ul class="bullet-list">
-          <li>New articles on degree planning and study systems</li>
-          <li>Early access to checklists, planners, and templates</li>
-          <li>Opportunities to shape future products for active duty</li>
+          <li>Step-by-step articles on planning and funding school</li>
+          <li>Checklists and planners tuned to active duty schedules</li>
+          <li>Future premium tools &amp; workshops when they launch</li>
         </ul>
-        <p class="note">
-          No spam. No “quote of the day.” Just practical support for earning your degree while you serve.
-        </p>
       </div>
       <div>
         <form class="contact-form" action="#" method="post">
@@ -411,61 +133,19 @@
           </div>
           <button type="submit" class="btn primary full-width">Join the list</button>
           <p class="form-footnote">
-            *For now this is a demo form. Later we can connect it to your email platform (ConvertKit, MailerLite, etc.).
+            *Demo form for now. We’ll connect this to your email platform later.
           </p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Service &amp; Scholar. All rights reserved.</p>
-      <p class="footer-note">
-        Built by an active duty service member for others who want more than “just get a degree someday.”
-      </p>
     </div>
   </footer>
 
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMobile = document.getElementById('nav-mobile');
-
-    if (navToggle && navMobile) {
-      navToggle.addEventListener('click', () => {
-        const isOpen = navMobile.classList.toggle('open');
-        navToggle.classList.toggle('open', isOpen);
-        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-
-      // Close menu when a mobile link is clicked
-      navMobile.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMobile.classList.remove('open');
-          navToggle.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-
-    // Title fade + header reveal on scroll
-    const header = document.querySelector('.site-header');
-    const landingHero = document.querySelector('.landing-hero');
-
-    function handleScroll() {
-      const scrolled = window.scrollY > 40;
-      if (header) header.classList.toggle('header-visible', scrolled);
-      if (landingHero) landingHero.classList.toggle('hero-faded', scrolled);
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    // Run once on load in case user refreshes mid-scroll
-    handleScroll();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
