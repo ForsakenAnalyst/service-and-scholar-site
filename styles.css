@@ -1,128 +1,102 @@
 /* =========================================================
-   Service & Scholar — Option 1 "Midnight Scholar"
+   Service & Scholar — Option 4 "Earth + Steel"
    Theme system:
    - Default = system preference (prefers-color-scheme)
    - Manual override = <html data-theme="dark"> or "light"
    ========================================================= */
 
-/* ---------- Light theme (manual override OR default if system is light) ---------- */
-:root {
+/* ---------- Light theme (Earth + Steel) ---------- */
+:root{
   /* Backgrounds */
-  --bg: #F8FAFC;                 /* page background */
-  --bg-elevated: #FFFFFF;        /* cards / header backing */
-  --bg-soft: #F1F5F9;            /* subtle section bg */
+  --bg: #F8F7F4;          /* warm off-white */
+  --bg-soft: #F2F1EC;     /* subtle section background */
+  --bg-elevated: #FFFFFF; /* cards / header backing */
 
-  /* Brand */
-  --primary: #0F172A;            /* deep navy */
-  --primary-soft: rgba(15, 23, 42, 0.12);
-
-  --accent: #D4AF37;             /* muted gold */
-  --accent-soft: rgba(212, 175, 55, 0.18);
+  /* Brand + accents */
+  --accent: #4D7C0F;      /* olive */
+  --accent-soft: rgba(77, 124, 15, 0.18);
 
   /* Text */
-  --text-main: #0F172A;
-  --text-subtle: #475569;
+  --text-main: #1F2937;   /* steel */
+  --text-subtle: #78716C; /* warm gray */
 
-  /* Borders / lines */
-  --border-subtle: rgba(15, 23, 42, 0.12);
+  /* Borders / shadows */
+  --border-subtle: rgba(31, 41, 55, 0.12);
+  --shadow-soft: 0 18px 45px rgba(31, 41, 55, 0.10);
 
   /* Radii / layout */
   --radius-lg: 1.25rem;
   --radius-xl: 999px;
   --container-width: 1040px;
 
-  /* Shadows */
-  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
-
-  /* Extras */
-  --link-underline: rgba(212, 175, 55, 0.75);
-  --focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.30);
+  /* Focus + link underline */
+  --focus-ring: 0 0 0 3px rgba(77, 124, 15, 0.28);
+  --link-underline: rgba(77, 124, 15, 0.75);
 
   color-scheme: light;
 }
 
-/* ---------- Dark theme (Midnight Scholar) ---------- */
-:root[data-theme="dark"] {
-  /* Backgrounds */
-  --bg: #0F172A;                 /* Deep Navy / Slate */
-  --bg-elevated: #111827;        /* cards / header backing */
-  --bg-soft: #0B1220;            /* softer/darker bg */
+/* ---------- Dark theme (Earth + Steel) ---------- */
+:root[data-theme="dark"]{
+  --bg: #0F1411;          /* deep forest-charcoal */
+  --bg-soft: #0B0F0D;     /* deeper */
+  --bg-elevated: #141B17; /* panels */
 
-  /* Brand */
-  --primary: #E5E7EB;            /* inverted usage */
-  --primary-soft: rgba(148, 163, 184, 0.18);
+  --accent: #84CC16;      /* brighter olive for contrast */
+  --accent-soft: rgba(132, 204, 22, 0.18);
 
-  --accent: #D4AF37;             /* muted gold */
-  --accent-soft: rgba(212, 175, 55, 0.18);
+  --text-main: #E7E8E4;   /* warm light */
+  --text-subtle: #A3A9A3; /* muted */
 
-  /* Text */
-  --text-main: #E5E7EB;
-  --text-subtle: #94A3B8;
+  --border-subtle: rgba(231, 232, 228, 0.14);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
 
-  /* Borders / lines */
-  --border-subtle: rgba(148, 163, 184, 0.18);
+  --focus-ring: 0 0 0 3px rgba(132, 204, 22, 0.26);
+  --link-underline: rgba(132, 204, 22, 0.78);
 
-  /* Radii / layout */
   --radius-lg: 1.25rem;
   --radius-xl: 999px;
   --container-width: 1040px;
-
-  /* Shadows */
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
-
-  /* Extras */
-  --link-underline: rgba(212, 175, 55, 0.85);
-  --focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.35);
 
   color-scheme: dark;
 }
 
 /* ---------- Follow system preference only when no manual data-theme is set ---------- */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    /* copy of dark theme */
-    --bg: #0F172A;
-    --bg-elevated: #111827;
-    --bg-soft: #0B1220;
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme]){
+    --bg: #0F1411;
+    --bg-soft: #0B0F0D;
+    --bg-elevated: #141B17;
 
-    --primary: #E5E7EB;
-    --primary-soft: rgba(148, 163, 184, 0.18);
+    --accent: #84CC16;
+    --accent-soft: rgba(132, 204, 22, 0.18);
 
-    --accent: #D4AF37;
-    --accent-soft: rgba(212, 175, 55, 0.18);
+    --text-main: #E7E8E4;
+    --text-subtle: #A3A9A3;
 
-    --text-main: #E5E7EB;
-    --text-subtle: #94A3B8;
+    --border-subtle: rgba(231, 232, 228, 0.14);
+    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
 
-    --border-subtle: rgba(148, 163, 184, 0.18);
+    --focus-ring: 0 0 0 3px rgba(132, 204, 22, 0.26);
+    --link-underline: rgba(132, 204, 22, 0.78);
 
     --radius-lg: 1.25rem;
     --radius-xl: 999px;
     --container-width: 1040px;
-
-    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
-
-    --link-underline: rgba(212, 175, 55, 0.85);
-    --focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.35);
 
     color-scheme: dark;
   }
 }
 
 /* =========================================================
-   Base + existing site styles
+   Base + Site styles (theme-aware)
+   COPY/PASTE: Replace your entire styles.css with this
    ========================================================= */
 
-* {
-  box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
+body{
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: radial-gradient(circle at top, var(--bg-soft) 0, var(--bg) 70%);
   color: var(--text-main);
@@ -130,7 +104,7 @@ body {
 }
 
 /* Layout container */
-.container {
+.container{
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
@@ -138,56 +112,38 @@ body {
 }
 
 /* Header */
-header {
+header.site-header{
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(2, 6, 23, 0.6);
+  background: color-mix(in srgb, var(--bg) 78%, var(--bg-elevated) 22%);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
-.header-inner {
+.header-inner{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: .9rem;
   height: 72px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+.logo-wordmark{
   color: var(--text-main);
   text-decoration: none;
-}
-
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-lg);
-  background: radial-gradient(circle at top left, var(--accent) 0%, rgba(212, 175, 55, 0.2) 55%, rgba(0,0,0,0) 70%);
-  box-shadow: 0 0 0 1px var(--border-subtle);
-}
-
-.brand-title {
   font-weight: 700;
   letter-spacing: 0.2px;
 }
 
-.brand-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-subtle);
-}
-
-/* Nav */
-.nav-desktop {
+/* Desktop nav */
+.nav-desktop{
   display: flex;
   gap: 1.15rem;
   align-items: center;
 }
 
-.nav-desktop a {
+.nav-desktop a{
   color: var(--text-subtle);
   text-decoration: none;
   font-weight: 500;
@@ -196,190 +152,179 @@ header {
   transition: 150ms ease;
 }
 
-.nav-desktop a:hover {
+.nav-desktop a:hover{
   color: var(--text-main);
   border-bottom-color: var(--link-underline);
 }
 
-.nav-active {
+.nav-active{
   color: var(--text-main) !important;
   border-bottom-color: var(--link-underline) !important;
 }
 
+/* Mobile hamburger */
+.nav-toggle{
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: .4rem;
+}
+.nav-toggle span{
+  display:block;
+  width: 26px;
+  height: 2px;
+  background: color-mix(in srgb, var(--text-main) 75%, transparent 25%);
+  margin: 5px 0;
+  border-radius: 999px;
+}
+
+/* Mobile nav dropdown */
+.nav-mobile{
+  display: none;
+  border-top: 1px solid var(--border-subtle);
+  background: color-mix(in srgb, var(--bg) 70%, var(--bg-elevated) 30%);
+}
+.nav-mobile.open{ display:block; }
+.nav-mobile a{
+  display:block;
+  padding: .9rem 1.25rem;
+  color: var(--text-subtle);
+  text-decoration:none;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.nav-mobile a:hover{ color: var(--text-main); }
+
 /* Hero */
-.hero {
+.landing-hero, .hero{
   padding: 5.5rem 0 3.5rem;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
-  align-items: center;
+.landing-kicker, .section-kicker{
+  color: var(--text-subtle);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  margin: 0 0 .6rem;
 }
 
-.hero h1 {
+.landing-title, .section-title, .hero h1{
   font-size: clamp(2.1rem, 4vw, 3.1rem);
   line-height: 1.1;
   margin: 0 0 0.75rem;
   letter-spacing: -0.02em;
 }
 
-.hero p {
+.landing-subtitle, .section-intro, .hero p{
   margin: 0 0 1.25rem;
   color: var(--text-subtle);
   font-size: 1.05rem;
-  max-width: 58ch;
+  max-width: 62ch;
 }
 
-.hero-card {
-  background: rgba(17, 24, 39, 0.55);
+/* Sections */
+section.section{
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.section-alt{
+  background: color-mix(in srgb, var(--bg) 70%, var(--bg-elevated) 30%);
+}
+
+/* Grids / cards */
+.grid{
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card{
+  background: color-mix(in srgb, var(--bg-elevated) 92%, var(--bg) 8%);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
   box-shadow: var(--shadow-soft);
 }
 
-.hero-card h3 {
-  margin: 0 0 0.25rem;
-}
+.card h3{ margin: 0 0 0.25rem; }
+.card p{ margin: 0; color: var(--text-subtle); }
 
-.hero-card p {
-  margin: 0;
-  color: var(--text-subtle);
+.card a{
+  display:inline-block;
+  margin-top:.85rem;
+  color: var(--text-main);
+  text-decoration:none;
+  border-bottom: 1px solid var(--link-underline);
+  padding-bottom: .1rem;
 }
 
 /* Buttons */
-.btn {
+.btn{
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   padding: 0.75rem 1.05rem;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-subtle);
-  background: rgba(17, 24, 39, 0.5);
+  background: color-mix(in srgb, var(--bg-elevated) 85%, var(--bg) 15%);
   color: var(--text-main);
   text-decoration: none;
   font-weight: 600;
   transition: 160ms ease;
 }
 
-.btn:hover {
+.btn:hover{
   transform: translateY(-1px);
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border-subtle) 60%);
 }
 
-.btn.primary {
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.92), rgba(212, 175, 55, 0.80));
-  color: #0B1020;
-  border-color: rgba(212, 175, 55, 0.55);
+.btn.primary{
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--accent) 88%, white 12%),
+    color-mix(in srgb, var(--accent) 78%, black 22%)
+  );
+  color: #0B0F0D;
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent 45%);
 }
 
-.btn.primary:hover {
-  border-color: rgba(212, 175, 55, 0.75);
-}
-
-.btn.ghost {
+.btn.ghost{
   background: transparent;
 }
 
-/* Sections */
-section {
-  padding: 3.5rem 0;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.section-title {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.section-title h2 {
-  margin: 0;
-  font-size: 1.45rem;
-}
-
-.section-title p {
-  margin: 0;
-  color: var(--text-subtle);
-}
-
-/* Cards grid */
-.grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.card {
-  background: rgba(17, 24, 39, 0.55);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.card h3 {
-  margin: 0 0 0.25rem;
-}
-
-.card p {
-  margin: 0;
-  color: var(--text-subtle);
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 0.85rem;
-  color: var(--text-main);
-  text-decoration: none;
-  border-bottom: 1px solid var(--link-underline);
-  padding-bottom: 0.1rem;
-}
-
-.card a:hover {
-  opacity: 0.95;
-}
-
 /* Forms */
-input, textarea, select {
+.contact-form .form-field{ margin-bottom: 1rem; }
+label{ display:block; margin-bottom: .4rem; color: var(--text-subtle); }
+
+input, textarea, select{
   width: 100%;
   padding: 0.75rem 0.85rem;
   border-radius: 0.9rem;
   border: 1px solid var(--border-subtle);
-  background: rgba(17, 24, 39, 0.55);
+  background: color-mix(in srgb, var(--bg-elevated) 90%, var(--bg) 10%);
   color: var(--text-main);
 }
 
-input::placeholder, textarea::placeholder {
-  color: var(--text-subtle);
-}
+input::placeholder, textarea::placeholder{ color: var(--text-subtle); }
 
-input:focus, textarea:focus, select:focus {
+input:focus, textarea:focus, select:focus{
   outline: none;
   box-shadow: var(--focus-ring);
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border-subtle) 55%);
 }
 
+.full-width{ width:100%; justify-content:center; }
+
 /* Footer */
-footer {
+.site-footer{
   padding: 2.5rem 0;
   border-top: 1px solid var(--border-subtle);
   color: var(--text-subtle);
 }
 
 /* Responsive */
-@media (max-width: 980px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  .nav-desktop {
-    display: none;
-  }
+@media (max-width: 980px){
+  .grid{ grid-template-columns: 1fr; }
+  .nav-desktop{ display:none; }
+  .nav-mobile{ display:block; }
 }
