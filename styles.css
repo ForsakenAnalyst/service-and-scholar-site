@@ -143,7 +143,6 @@ header.site-header > *{
   position: relative;
 }
 
-
 /* Desktop nav */
 .nav-desktop{
   display: flex;
@@ -251,6 +250,20 @@ header.site-header > *{
   max-width: 62ch;
 }
 
+/* Muted helper text (used on privacy page) */
+.muted{
+  color: var(--text-subtle);
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Lead paragraph helper (used on About + legal sections) */
+.lead{
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-top: 0;
+}
+
 /* =========================================================
    Sections
    ========================================================= */
@@ -279,6 +292,28 @@ a{
 a:hover{
   color: var(--blue-600);
   text-decoration: underline;
+}
+
+/* =========================================================
+   Lists
+   ========================================================= */
+
+.bullet-list{
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-subtle);
+}
+.bullet-list li{ margin: 0.5rem 0; }
+
+/* =========================================================
+   Two-column layout (About page)
+   ========================================================= */
+
+.two-col{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
 }
 
 /* =========================================================
@@ -420,6 +455,11 @@ input:focus, textarea:focus, select:focus{
 
 @media (max-width: 980px){
   .grid{ grid-template-columns: 1fr; }
+
+  .two-col{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
   /* Mobile nav behavior */
   .nav-desktop{ display:none; }
