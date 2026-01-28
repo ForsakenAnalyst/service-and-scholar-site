@@ -1,28 +1,28 @@
 /* =========================================================
-   Service & Scholar — Option 4 "Earth + Steel"
-   Theme system:
-   - Default = system preference (prefers-color-scheme)
-   - Manual override = <html data-theme="dark"> or "light"
+   Service & Scholar — Single Theme (Orange / Blue / White)
+   No dark mode / no theme switching
+   COPY/PASTE: Replace your entire styles.css with this
    ========================================================= */
 
-/* ---------- Light theme (Earth + Steel) ---------- */
 :root{
-  /* Backgrounds */
-  --bg: #F8F7F4;          /* warm off-white */
-  --bg-soft: #F2F1EC;     /* subtle section background */
-  --bg-elevated: #FFFFFF; /* cards / header backing */
+  /* Base surfaces */
+  --bg: #FFFFFF;                 /* white */
+  --bg-soft: #F6F8FC;            /* soft blue-tinted off-white */
+  --bg-elevated: #FFFFFF;        /* cards / header backing */
 
-  /* Brand + accents */
-  --accent: #4D7C0F;      /* olive */
-  --accent-soft: rgba(77, 124, 15, 0.18);
+  /* Brand colors */
+  --blue: #1D4ED8;               /* blue-700 */
+  --blue-600: #2563EB;           /* blue-600 */
+  --orange: #F97316;             /* orange-500 */
+  --orange-600: #EA580C;         /* orange-600 */
 
   /* Text */
-  --text-main: #1F2937;   /* steel */
-  --text-subtle: #78716C; /* warm gray */
+  --text-main: #0F172A;          /* slate-900 */
+  --text-subtle: #475569;        /* slate-600 */
 
   /* Borders / shadows */
-  --border-subtle: rgba(31, 41, 55, 0.12);
-  --shadow-soft: 0 18px 45px rgba(31, 41, 55, 0.10);
+  --border-subtle: rgba(15, 23, 42, 0.10);
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.10);
 
   /* Radii / layout */
   --radius-lg: 1.25rem;
@@ -30,67 +30,18 @@
   --container-width: 1040px;
 
   /* Focus + link underline */
-  --focus-ring: 0 0 0 3px rgba(77, 124, 15, 0.28);
-  --link-underline: rgba(77, 124, 15, 0.75);
+  --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  --link-underline: rgba(249, 115, 22, 0.78);
 
-  color-scheme: light;
-}
+  /* Accent mapping (used by buttons/hover states below) */
+  --accent: var(--orange);
+  --accent-soft: rgba(249, 115, 22, 0.18);
 
-/* ---------- Dark theme (Earth + Steel) ---------- */
-:root[data-theme="dark"]{
-  --bg: #0F1411;          /* deep forest-charcoal */
-  --bg-soft: #0B0F0D;     /* deeper */
-  --bg-elevated: #141B17; /* panels */
-
-  --accent: #84CC16;      /* brighter olive for contrast */
-  --accent-soft: rgba(132, 204, 22, 0.18);
-
-  --text-main: #E7E8E4;   /* warm light */
-  --text-subtle: #A3A9A3; /* muted */
-
-  --border-subtle: rgba(231, 232, 228, 0.14);
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
-
-  --focus-ring: 0 0 0 3px rgba(132, 204, 22, 0.26);
-  --link-underline: rgba(132, 204, 22, 0.78);
-
-  --radius-lg: 1.25rem;
-  --radius-xl: 999px;
-  --container-width: 1040px;
-
-  color-scheme: dark;
-}
-
-/* ---------- Follow system preference only when no manual data-theme is set ---------- */
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme]){
-    --bg: #0F1411;
-    --bg-soft: #0B0F0D;
-    --bg-elevated: #141B17;
-
-    --accent: #84CC16;
-    --accent-soft: rgba(132, 204, 22, 0.18);
-
-    --text-main: #E7E8E4;
-    --text-subtle: #A3A9A3;
-
-    --border-subtle: rgba(231, 232, 228, 0.14);
-    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
-
-    --focus-ring: 0 0 0 3px rgba(132, 204, 22, 0.26);
-    --link-underline: rgba(132, 204, 22, 0.78);
-
-    --radius-lg: 1.25rem;
-    --radius-xl: 999px;
-    --container-width: 1040px;
-
-    color-scheme: dark;
-  }
+  color-scheme: light; /* force light UI controls */
 }
 
 /* =========================================================
-   Base + Site styles (theme-aware)
-   COPY/PASTE: Replace your entire styles.css with this
+   Base + Site styles
    ========================================================= */
 
 *{ box-sizing: border-box; }
@@ -116,7 +67,7 @@ header.site-header{
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--bg) 78%, var(--bg-elevated) 22%);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -132,7 +83,7 @@ header.site-header{
 .logo-wordmark{
   color: var(--text-main);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.2px;
 }
 
@@ -146,7 +97,7 @@ header.site-header{
 .nav-desktop a{
   color: var(--text-subtle);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.4rem 0.2rem;
   border-bottom: 2px solid transparent;
   transition: 150ms ease;
@@ -154,7 +105,7 @@ header.site-header{
 
 .nav-desktop a:hover{
   color: var(--text-main);
-  border-bottom-color: var(--link-underline);
+  border-bottom-color: var(--link-underline); /* orange underline */
 }
 
 .nav-active{
@@ -173,7 +124,7 @@ header.site-header{
   display:block;
   width: 26px;
   height: 2px;
-  background: color-mix(in srgb, var(--text-main) 75%, transparent 25%);
+  background: rgba(15, 23, 42, 0.75);
   margin: 5px 0;
   border-radius: 999px;
 }
@@ -182,7 +133,7 @@ header.site-header{
 .nav-mobile{
   display: none;
   border-top: 1px solid var(--border-subtle);
-  background: color-mix(in srgb, var(--bg) 70%, var(--bg-elevated) 30%);
+  background: rgba(255, 255, 255, 0.96);
 }
 .nav-mobile.open{ display:block; }
 .nav-mobile a{
@@ -228,7 +179,18 @@ section.section{
 }
 
 .section-alt{
-  background: color-mix(in srgb, var(--bg) 70%, var(--bg-elevated) 30%);
+  background: var(--bg-soft);
+}
+
+/* Links (global) */
+a{
+  color: var(--blue);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+a:hover{
+  color: var(--blue-600);
+  text-decoration: underline;
 }
 
 /* Grids / cards */
@@ -239,7 +201,7 @@ section.section{
 }
 
 .card{
-  background: color-mix(in srgb, var(--bg-elevated) 92%, var(--bg) 8%);
+  background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
@@ -249,13 +211,17 @@ section.section{
 .card h3{ margin: 0 0 0.25rem; }
 .card p{ margin: 0; color: var(--text-subtle); }
 
+/* Card link styling (keep your underline look, but use blue text + orange underline) */
 .card a{
   display:inline-block;
   margin-top:.85rem;
-  color: var(--text-main);
+  color: var(--blue);
   text-decoration:none;
-  border-bottom: 1px solid var(--link-underline);
+  border-bottom: 1px solid var(--link-underline); /* orange underline */
   padding-bottom: .1rem;
+}
+.card a:hover{
+  color: var(--blue-600);
 }
 
 /* Buttons */
@@ -266,30 +232,35 @@ section.section{
   padding: 0.75rem 1.05rem;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-subtle);
-  background: color-mix(in srgb, var(--bg-elevated) 85%, var(--bg) 15%);
+  background: var(--bg-elevated);
   color: var(--text-main);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   transition: 160ms ease;
 }
 
 .btn:hover{
   transform: translateY(-1px);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border-subtle) 60%);
+  border-color: rgba(37, 99, 235, 0.25); /* subtle blue border on hover */
 }
 
 .btn.primary{
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--accent) 88%, white 12%),
-    color-mix(in srgb, var(--accent) 78%, black 22%)
-  );
-  color: #0B0F0D;
-  border-color: color-mix(in srgb, var(--accent) 55%, transparent 45%);
+  background: linear-gradient(180deg, var(--orange), var(--orange-600));
+  color: #111827; /* readable on orange */
+  border-color: rgba(249, 115, 22, 0.55);
+  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.18);
+}
+.btn.primary:hover{
+  border-color: rgba(249, 115, 22, 0.75);
+  box-shadow: 0 16px 34px rgba(249, 115, 22, 0.22);
 }
 
 .btn.ghost{
   background: transparent;
+}
+.btn.ghost:hover{
+  background: rgba(37, 99, 235, 0.08); /* soft blue */
+  border-color: rgba(37, 99, 235, 0.20);
 }
 
 /* Forms */
@@ -301,16 +272,16 @@ input, textarea, select{
   padding: 0.75rem 0.85rem;
   border-radius: 0.9rem;
   border: 1px solid var(--border-subtle);
-  background: color-mix(in srgb, var(--bg-elevated) 90%, var(--bg) 10%);
+  background: #FFFFFF;
   color: var(--text-main);
 }
 
-input::placeholder, textarea::placeholder{ color: var(--text-subtle); }
+input::placeholder, textarea::placeholder{ color: rgba(71, 85, 105, 0.85); }
 
 input:focus, textarea:focus, select:focus{
   outline: none;
   box-shadow: var(--focus-ring);
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--border-subtle) 55%);
+  border-color: rgba(37, 99, 235, 0.35);
 }
 
 .full-width{ width:100%; justify-content:center; }
