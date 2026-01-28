@@ -143,17 +143,6 @@ header.site-header > *{
   position: relative;
 }
 
-.logo-wordmark::after{
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-left: 10px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--blue), var(--orange));
-  vertical-align: middle;
-  opacity: 0.9;
-}
 
 /* Desktop nav */
 .nav-desktop{
